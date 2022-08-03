@@ -12,6 +12,6 @@ COMMANDS:
 	w  - west       - курс на запад
 	jw - jump west  - прыжок на запад
 	h  - hold       - зависнуть на месте
-  p  - periscope  - перископ
+ 	p  - periscope  - перископ
 	r  - radar      - радар
 	reset     
