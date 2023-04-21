@@ -1,6 +1,7 @@
 import random
 import time
-while True:
+exit = True
+while (exit == True):
 	def print_p():
 		global en_vec
 		if en_vec == 1:
@@ -477,7 +478,9 @@ while True:
 	def exit_check():
 		global g_o
 		global command2
-		if command2 == "reset":
+		global exit
+		if command2 == "q":
+			exit = False
 			g_o = True
 
 	def dvij():
@@ -488,7 +491,7 @@ while True:
 		global g_o
 		global level
 		change = False
-		if command2 == "reset":
+		if command2 == "q":
 			g_o = True
 		elif command2 == "n" or command2 == "s" or command2 == "e" or command2 == "w":
 			command = command2
@@ -502,7 +505,7 @@ while True:
 				if broken == 2:
 					radar()
 				else: 
-					print("ПЕРЕБОЙ В РАБОТЕ ПРИБОРОВ")
+					print("ПЕРЕБОЙ qВ РАБОТЕ ПРИБОРОВ")
 		elif command2 == "jn":
 			print("")
 			print("СОВЕРШАЕТСЯ СВЕРХСВЕТОВОЙ ПРЫЖОК")
@@ -706,6 +709,7 @@ while True:
 	
 	#ПРОГРАММА
 
+	
 	map = [[0,0,0,0],
 		[0,0,0,0],
 		[0,0,0,0],
@@ -727,6 +731,7 @@ while True:
 			map[en_start_y][en_start_x] = 2
 			break
 	g_o = False
+	exit = False
 	first = True
 	level = 1
 	my_vec = random.randint(1,4)
@@ -786,11 +791,14 @@ while True:
 	print("h  - hold       - зависнуть на месте")
 	print("p  - periscope  - перископ")
 	print("r  - radar      - радар")
-	print("reset           - сброс игры")
+	print("q  - close      - выход")
 	print("")
 	print("Нажмите клавишу Enter")
 	print("")
 	x = input()
+	if(x == "q"):
+		exit = False
+		break
 	print("")
 	print("")
 	print("")
