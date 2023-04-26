@@ -1,4 +1,3 @@
-КОМАНДЫ / COMMANDS
 
 	n  - north      - курс на север
     jn - jump north - прыжок на север
